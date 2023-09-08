@@ -6,9 +6,9 @@ variable "age" {
   default = 30
 }
 
-variable "female" {
-  default = yes
-}
+# variable "female" {
+#   default = yes
+# }
 
 output "Name" {
   value = "Name is ${var.name}"
@@ -18,6 +18,6 @@ output "age" {
   value = "age is ${var.age}"
 }
 
-output "female" {
-  value = "Female = ${female}"
-}
+# output "female" {
+#   value = "Female = ${female}"
+# }
