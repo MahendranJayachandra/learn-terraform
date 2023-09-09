@@ -65,5 +65,5 @@ output "displayobject" {
 variable "env" {}
 
 output "displayenvironment" {
-  value = env
+  value = var.env
 }
