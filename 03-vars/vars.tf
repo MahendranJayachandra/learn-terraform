@@ -27,7 +27,7 @@ variable "createlist" {
 }
 
 output "fruits" {
-  value = "fruits are ${createlist}"
+  value = "fruits are ${var.createlist}"
 }
 
 variable "createmap" {
@@ -39,7 +39,7 @@ variable "createmap" {
 }
 
 output "displaymap" {
-  value = createmap
+  value = var.createmap
 }
 
 variable "createmultiplemap" {
@@ -59,5 +59,5 @@ variable "createmultiplemap" {
 }
 
 output "displaymultiplemap" {
-  value = createmultiplemap
+  value = var.createmultiplemap
 }
