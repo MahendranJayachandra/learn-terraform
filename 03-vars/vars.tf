@@ -59,5 +59,5 @@ variable "object" {
 }
 
 output "displayobject" {
-  value = var.displayobject["orange"]
+  value = var.object["orange"]
 }
