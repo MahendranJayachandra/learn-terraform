@@ -61,3 +61,9 @@ variable "object" {
 output "displayobject" {
   value = var.object["orange"]
 }
+
+variable "env" {}
+
+output "displayenvironment" {
+  value = env
+}
