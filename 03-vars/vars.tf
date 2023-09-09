@@ -59,5 +59,5 @@ variable "createmultiplemap" {
 }
 
 output "displaymultiplemap" {
-  value = var.createmultiplemap[1]
+  value = var.createmultiplemap["orange"]
 }
