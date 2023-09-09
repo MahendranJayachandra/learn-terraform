@@ -21,3 +21,11 @@ output "age" {
 # output "female" {
 #   value = "Female = ${female}"
 # }
+
+variable "createlist" {
+    default = ["apple","orange","custard apple"]
+}
+
+output "fruits" {
+  value = "fruits are ${createlist}"
+}
