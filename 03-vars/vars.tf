@@ -27,7 +27,7 @@ variable "createlist" {
 }
 
 output "fruits" {
-  value = "fruits are ${var.createlist}"
+  value = "fruits are ${var.createlist[2]}"
 }
 
 variable "createmap" {
