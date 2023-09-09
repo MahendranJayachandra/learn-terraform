@@ -42,7 +42,7 @@ output "displaymap" {
   value = var.createmap
 }
 
-variable "createmultiplemap" {
+variable "object" {
   default = {
       "orange" = {
         "color": "orange"
@@ -58,6 +58,6 @@ variable "createmultiplemap" {
   
 }
 
-output "displaymultiplemap" {
-  value = var.createmultiplemap["orange"]
+output "displayobject" {
+  value = var.displayobject["orange"]
 }
