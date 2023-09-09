@@ -8,7 +8,7 @@ variable "age" {
 
 # variable "female" {
 #   default = yes
-# }
+# } 
 
 output "Name" {
   value = "Name is ${var.name}"
@@ -28,4 +28,36 @@ variable "createlist" {
 
 output "fruits" {
   value = "fruits are ${createlist}"
+}
+
+variable "createmap" {
+  default = {
+    "apple":"10"
+    "orange":"20"
+    "custard apple":"50"
+  }
+}
+
+output "displaymap" {
+  value = createmap
+}
+
+variable "createmultiplemap" {
+  default = {
+      "orange" = {
+        "color": "orange"
+        "price": 300
+      }
+
+      "apple" = {
+        "color":"red"
+        "price": 500
+      }
+
+  }
+  
+}
+
+output "displaymultiplemap" {
+  value = createmultiplemap
 }
