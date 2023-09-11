@@ -3,7 +3,7 @@ data "aws_ami" "example" {
 
   owners = ["self"]
   tags = {
-    Name   = "app-server"
+    Name   = "Centos-8-DevOps-Practice"
     Tested = "true"
   }
 }
