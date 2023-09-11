@@ -1,9 +1,6 @@
 data "aws_ami" "example" {
-  most_recent = true
-
-  owners = ["self"]
-  tags = {
-    Name   = "Centos-8-DevOps-Practice"
-    Tested = "true"
-  }
+  executable_users = ["self"]
+  most_recent      = true
+  name_regex       = "Centos-8-DevOps-Practice"
+  owners           = ["self"]
 }
