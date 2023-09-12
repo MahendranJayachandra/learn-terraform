@@ -40,5 +40,5 @@ resource "aws_instance" "web" {
 }
 
 output "price" {
-  value = data.aws_instance.web.price
+  value = resource.aws_instance.web.price
 }
