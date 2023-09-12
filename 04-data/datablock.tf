@@ -9,3 +9,7 @@ data "aws_ami" "example" {
 provider "aws" {
   region = "us-east-1"
 }
+
+output "example" {
+  value = data.aws_ami.example.example.id
+}
