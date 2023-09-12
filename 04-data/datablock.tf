@@ -4,3 +4,8 @@ data "aws_ami" "example" {
   name_regex       = "WorkstationImage"
   owners           = ["322657627157"]
 }
+
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-east-1"
+}
