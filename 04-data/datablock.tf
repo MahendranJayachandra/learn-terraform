@@ -15,8 +15,8 @@ output "example" {
 }
 
 data "aws_ec2_spot_price" "getspotprice" {
-  availabilityZone = "us-east-1"
-  instanceType = "t3.medium"
+  availability_zone = "us-east-1"
+  instance_type = "t3.medium"
 }
 
 output "price" {
