@@ -40,5 +40,5 @@ resource "aws_instance" "web" {
 }
 
 output "price" {
-  value = data.aws_ami.ubuntu.price
+  value = data.aws_ami.web.price
 }
