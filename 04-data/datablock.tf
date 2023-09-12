@@ -11,5 +11,5 @@ provider "aws" {
 }
 
 output "example" {
-  value = data.aws_ami.example.example.id
+  value = data.aws_ami.example.id
 }
