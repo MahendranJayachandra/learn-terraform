@@ -16,7 +16,7 @@ output "example" {
 
 data "aws_ec2_spot_price" "getspotprice" {
   instance_type     = "t3.medium"
-  availability_zone = "us-west-2a"
+  availability_zone = "us-east-1b"
 
   filter {
     name   = "product-description"
