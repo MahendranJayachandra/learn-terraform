@@ -15,10 +15,15 @@ output "example" {
 }
 
 data "aws_ec2_spot_price" "getspotprice" {
-  availability_zone = "us-east-1a"
-  instance_type = "t3.micro"
+  instance_type     = "t3.medium"
+  availability_zone = "us-west-2a"
+
+  filter {
+    name   = "product-description"
+    values = ["Linux/UNIX"]
+  }
 }
 
 output "price" {
-  value = data.aws_ec2_spot_price.getspotprice.id[1]
+  value = data.aws_ec2_spot_price.getspotprice.id
 }
