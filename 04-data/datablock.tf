@@ -25,5 +25,5 @@ data "aws_ec2_spot_price" "getspotprice" {
 }
 
 output "price" {
-  value = data.aws_ec2_spot_price.getspotprice.id
+  value = data.aws_ec2_spot_price.getspotprice.spot_price
 }
