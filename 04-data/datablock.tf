@@ -27,3 +27,11 @@ data "aws_ec2_spot_price" "getspotprice" {
 output "price" {
   value = data.aws_ec2_spot_price.getspotprice.spot_price
 }
+
+data "aws_security_group" "selected" {
+  name = "Allow-All"
+}
+
+output "securitygroupdesc" {
+  value = data.aws_security_group.selected.id
+}
