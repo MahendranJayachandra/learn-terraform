@@ -4,8 +4,8 @@ resource "aws_instance" "web" {
 }
 
 data "aws_ami" "example" {
-  executable_users = ["self"]
+  executable_users = [322657627157]
   most_recent      = true
   name_regex       = "WorkstationImage"
-  owners           = ["self"]
+  owners           = [322657627157]
 }
