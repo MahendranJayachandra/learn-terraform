@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {
   ami           = data.aws_ami.example.id
   instance_type = "t3.micro"
-  security_groups = [aws_security_group.sg.id]
+  security_groups = [aws_security_group.sg.name]
   tags = {
     Name = "HelloWorld"
   }
