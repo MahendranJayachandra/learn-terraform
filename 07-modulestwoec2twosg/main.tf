@@ -11,9 +11,9 @@ module "servers1" {
 }
 
 output "sample1" {
-  value = module.servers.public_ip
+  value = module.servers.aws_instance.public_ip
 }
 
 output "sample2" {
-  value = module.servers1.public_ip
+  value = module.servers1.aws_instance.public_ip
 }
