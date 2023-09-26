@@ -14,6 +14,6 @@ output "sample1" {
   value = module.servers.public_ip
 }
 
-output "sample1" {
+output "sample2" {
   value = module.servers1
 }
