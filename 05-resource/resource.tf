@@ -1,6 +1,7 @@
 resource "aws_instance" "web" {
   ami           = data.aws_ami.example.id
   instance_type = "t2.micro"
+  security_groups = ["sg-0c8c5601fb85d7a11"]
 }
 
 data "aws_ami" "example" {
