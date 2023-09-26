@@ -9,3 +9,17 @@ data "aws_ami" "example" {
   name_regex       = "WorkstationImage"
   owners           = [322657627157]
 }
+
+provisioner "remote-exec" {
+    connection {
+    type     = "ssh"
+    user     = "centos"
+    password = "DevOps321"
+    host     = self.public_ip
+    }
+
+    inline = [
+      "sudo labauto ansible",
+      "ansible-pull localhost, -i https://github.com/MahendranJayachandra/roboshop-ansible main.yml -e role_name=frontend",
+    ]
+  }
