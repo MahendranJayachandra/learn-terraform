@@ -4,7 +4,7 @@ module "servers" {
  # servers = 5
 }
 
-module "servers" {
+module "servers1" {
   source = "./createec2"
   name = "sample2"
  # servers = 5
