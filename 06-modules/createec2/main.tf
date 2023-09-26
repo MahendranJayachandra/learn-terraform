@@ -24,7 +24,7 @@ resource "aws_security_group" "sg" {
     from_port        = 80
     to_port          = 80
     protocol         = "ssh"
-    cidr_blocks      = [0.0.0.0/0]
+    cidr_blocks      = ["0.0.0.0/0"]
     # ipv6_cidr_blocks = [aws_vpc.main.ipv6_cidr_block]
   }
 
