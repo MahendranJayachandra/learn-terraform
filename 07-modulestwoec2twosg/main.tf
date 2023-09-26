@@ -15,5 +15,5 @@ output "sample1" {
 }
 
 output "sample2" {
-  value = module.servers1
+  value = module.servers1.public_ip
 }
