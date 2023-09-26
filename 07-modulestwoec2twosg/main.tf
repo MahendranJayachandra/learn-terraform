@@ -9,3 +9,11 @@ module "servers1" {
   name = "sample2"
  # servers = 5
 }
+
+output "sample1" {
+  value = module.servers.public_ip
+}
+
+output "sample1" {
+  value = module.servers1
+}
