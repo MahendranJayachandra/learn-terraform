@@ -17,7 +17,7 @@ data "aws_ami" "example" {
 resource "aws_security_group" "sg" {
   name        = "sample sg"
   description = "Allow TLS inbound traffic"
-  vpc_id      = aws_vpc.main.id
+  # vpc_id      = aws_vpc.main.id
 
   ingress {
     description      = "sample sg"
