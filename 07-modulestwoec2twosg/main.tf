@@ -11,9 +11,9 @@ module "servers1" {
 }
 
 output "sample1" {
-  value = module.servers.sample1.instance_type
+  value = module.servers.sample1.public_ip
 }
 
 output "sample2" {
-  value = module.servers1.sample1.instance_type
+  value = module.servers1.sample1.public_ip
 }
