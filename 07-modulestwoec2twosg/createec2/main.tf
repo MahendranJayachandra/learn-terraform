@@ -44,5 +44,5 @@ resource "aws_security_group" "sg" {
 }
 
 output "sample1" {
-  value = resource.aws_instance.web.vpc_id
+  value = aws_instance.web.protocol
 }
