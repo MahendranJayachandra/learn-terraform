@@ -42,3 +42,7 @@ resource "aws_security_group" "sg" {
     Name = var.name
   }
 }
+
+output {
+  value = resource.aws_instance.web.vpc_id
+}
