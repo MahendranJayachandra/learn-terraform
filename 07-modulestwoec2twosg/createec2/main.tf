@@ -44,5 +44,5 @@ resource "aws_security_group" "sg" {
 }
 
 output "sample1" {
-  value = aws_instance.web.protocol
+  value = aws_instance.web.public_ip
 }
