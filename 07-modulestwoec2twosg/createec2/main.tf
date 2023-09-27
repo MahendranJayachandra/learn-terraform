@@ -43,6 +43,6 @@ resource "aws_security_group" "sg" {
   }
 }
 
-output {
+output "sample1" {
   value = resource.aws_instance.web.vpc_id
 }

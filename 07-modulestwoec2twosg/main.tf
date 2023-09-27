@@ -11,9 +11,9 @@ module "servers1" {
 }
 
 output "sample1" {
-  value = module.servers.instance_type
+  value = module.servers.sample1.instance_type
 }
 
 output "sample2" {
-  value = module.servers1.instance_type
+  value = module.servers1.sample1.instance_type
 }
