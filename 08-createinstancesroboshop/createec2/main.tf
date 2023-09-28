@@ -58,7 +58,7 @@ resource "aws_security_group" "sg" {
 
 resource "aws_route53_record" "www" {
   zone_id = "Z0297172FL3FT10HX2F2"
-  name    = var.name+"-dev"
+  name    = "${var.name}-dev"
   type    = "A"
   ttl     = 30
   records = [aws_instance.web.private_ip]
