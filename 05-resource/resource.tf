@@ -16,6 +16,15 @@ resource "aws_instance" "web" {
       "ansible-pull -i localhost, -U https://github.com/MahendranJayachandra/roboshop-ansible roboshop.yml -e role_name=frontend",
     ]
   }
+
+  terraform {
+  backend "s3" {
+    bucket = "terraformstatefile-05"
+    key    = "resourcestate/key"
+    region = "us-east-1"
+  }
+}
+
 }
 
 data "aws_ami" "example" {
