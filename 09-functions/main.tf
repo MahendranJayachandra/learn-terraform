@@ -1,5 +1,5 @@
 variable "courses" {
-    default = [devops,aws,azure,google]
+    default = ["devops","aws","azure","google"]
 }
 
 output "courses" {
