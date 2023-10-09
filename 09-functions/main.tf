@@ -3,7 +3,7 @@ variable "courses" {
 }
 
 output "courses" {
-  value = "course name is ${courses[1]}"
+  value = "course name is ${courses}"
 }
 
  
