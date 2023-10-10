@@ -11,6 +11,7 @@ variable "person" {
     mahendran = {
       age = 35
       gender = "male"
+      course = "devops"
     },
     muthulakshmi = {
       age = 30
@@ -31,4 +32,9 @@ output "person" {
 output "muthulakshmi" {
   value = "age is ${var.person["muthulakshmi"]["age"]}"
 }
- 
+
+output "personcourse" {
+  value = lookup(var.person,"course",var.person["mahendran"]["course"])
+}
+
+
