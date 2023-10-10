@@ -29,6 +29,6 @@ output "person" {
 }
 
 output "muthulakshmi" {
-  value = "age is ${var.person["muthulakshmi"][age]}"
+  value = "age is ${var.person["muthulakshmi"]["age"]}"
 }
  
