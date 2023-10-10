@@ -34,7 +34,7 @@ output "muthulakshmi" {
 }
 
 output "personcourse" {
-  value = lookup(var.person,"shanmugam","no person")
+  value = lookup(var.person,"shanmugam",lookup(var.person,"mahendran","no person"))
 }
 
 
