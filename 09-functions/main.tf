@@ -25,7 +25,7 @@ output "courses1" {
 }
 
 output "person" {
-  value = "number of persons are ${var.person.length}"
+  value = "number of persons are ${length(var.person)}"
 }
 
 output "muthulakshmi" {
