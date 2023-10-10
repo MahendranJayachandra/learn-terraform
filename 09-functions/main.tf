@@ -8,11 +8,11 @@ output "courses" {
 
 variable "person" {
   default = {
-    mahendran = {
+    "mahendran" = {
       age = 35
       gender = "male"
     },
-    muthulakshmi = {
+    "muthulakshmi" = {
       age = 30
       gender = "female"
     }
