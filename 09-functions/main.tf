@@ -34,7 +34,7 @@ output "muthulakshmi" {
 }
 
 output "personcourse" {
-  value = lookup(var.person,"course",var.person["mahendran"]["course"])
+  value = lookup(var.person["muthulakshmi"],"course",var.person["mahendran"]["course"])
 }
 
 
