@@ -20,8 +20,15 @@ variable "person" {
   
 }
 
-output "person" {
+output "courses1" {
   value = "course to choose ${element(var.courses,6)}"
 }
 
+output "person" {
+  value = "number of persons are ${var.person.length}"
+}
+
+output "muthulakshmi" {
+  value = "age is ${var.person[muthulakshmi][age]}"
+}
  
