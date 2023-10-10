@@ -21,7 +21,7 @@ variable "person" {
 }
 
 output "person" {
-  value = "course to choose ${element(var.courses,1)}"
+  value = "course to choose ${element(var.courses,6)}"
 }
 
  
