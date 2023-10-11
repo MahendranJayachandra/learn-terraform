@@ -51,10 +51,17 @@ variable "instancedetails" {
 }
 }
 
+data "aws_ami" "example" {
+  #executable_users = ["self"]
+  most_recent      = true
+  name_regex       = "Centos-8-DevOps-Practice"
+  owners           = ["self"]
+}
+
 resource "aws_instance" "instances" {
   for_each = var.instancedetails
+  ami = data.aws_ami.example
   instance_type = each.value[instance_type]
-  name = each.key
   tags = {
     name = each.key
   }
