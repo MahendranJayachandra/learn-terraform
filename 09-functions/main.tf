@@ -37,4 +37,26 @@ output "personcourse" {
   value = lookup(var.person,"shanmugam",lookup(var.person,"mahendran","no person"))
 }
 
+variable "instancedetails" {
+  default = {
+  frontend = {
+    intance_type = "t2.micro"
+  },
+  Mongodb = {
+    instance_type = "t3.micro"
+  },
+  Catalogue = {
+    instance_type = "t3.micro"
+  }
+}
+}
 
+resource "aws_instance" "instances" {
+  for_each = var.instancedetails
+  instance_type = each.value[instance_type]
+  name = each.key
+  tags = {
+    name = each.key
+  }
+  
+}
