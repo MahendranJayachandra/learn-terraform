@@ -55,7 +55,7 @@ data "aws_ami" "example" {
   #executable_users = ["self"]
   most_recent      = true
   name_regex       = "Centos-8-DevOps-Practice"
-  owners           = ["self"]
+  owners           = [322657627157]
 }
 
 resource "aws_instance" "instances" {
