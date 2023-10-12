@@ -62,7 +62,7 @@ resource "aws_instance" "instances" {
   for_each = var.instancedetails
   ami = data.aws_ami.example.id
   instance_type = each.value.instance_type
-  name = each.key
+  instance_name = each.key
   tags = {
     name = each.key
   }
