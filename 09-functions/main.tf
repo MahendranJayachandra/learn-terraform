@@ -40,7 +40,7 @@ output "personcourse" {
 variable "instancedetails" {
   default = {
   frontend = {
-    intance_type = "t2.micro"
+    instance_type = "t2.micro"
   },
   Mongodb = {
     instance_type = "t3.micro"
