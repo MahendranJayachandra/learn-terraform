@@ -63,7 +63,6 @@ resource "aws_instance" "instances" {
   ami = data.aws_ami.example.id
   instance_type = each.value.instance_type
   tags = {
-    name = each.key
+    Name = each.key
   }
-  
 }
