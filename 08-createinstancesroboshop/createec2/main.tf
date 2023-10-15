@@ -5,12 +5,23 @@ resource "aws_instance" "web" {
   tags = {
     Name = var.name
   }
-  provisioner "remote-exec" {
+  
+}
+// provisioner removed out of resource aws_instance.web
+// when there are changes in ansible configuration, AWS will destroy the resources every time and creates new 
+//resource
+//provisioners code kept under "null_instances" which creates nothing but runs the ansible code
+// self.public_ip needs to be changed into resource.aws_instance.web.public_ip
+// depends_on is used to specify to run ansible only after creation of aws_instance and route53
+
+resource "null_instance" "runansible" {
+depends_on = [ aws_instance.web, aws_route53_record.www ]
+provisioner "remote-exec" {
     connection {
     type     = "ssh"
     user     = "centos"
     password = "DevOps321"
-    host     = self.public_ip
+    host     = resource.aws_instance.web.public_ip
     }
 
     inline = [
