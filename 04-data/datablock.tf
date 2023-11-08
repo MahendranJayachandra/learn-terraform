@@ -1,8 +1,10 @@
 data "aws_ami" "example" {
   #executable_users = "322657627157" # the program fetching zero results when I gave my account id as executable_users
   most_recent      = true
-  name_regex       = "WorkstationImage"
-  owners           = ["322657627157"]
+  #name_regex       = "WorkstationImage"
+  #owners           = ["322657627157"]
+  name_regex       = "DevOps-Practice"
+  owners           = "973714476881"
 }
 
 # Configure the AWS Provider
