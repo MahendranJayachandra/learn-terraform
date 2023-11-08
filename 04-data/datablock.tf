@@ -35,3 +35,11 @@ data "aws_security_group" "selected" {
 output "securitygroupdesc" {
   value = data.aws_security_group.selected.id
 }
+
+data "aws_iam_role" "example" {
+  name = "AccessSSMParameters"
+}
+
+output "printRoleARN" {
+  value = data.aws_iam_role.example.arn
+}
