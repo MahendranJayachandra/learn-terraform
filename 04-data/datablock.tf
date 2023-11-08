@@ -4,7 +4,7 @@ data "aws_ami" "example" {
   #name_regex       = "WorkstationImage"
   #owners           = ["322657627157"]
   name_regex       = "DevOps-Practice"
-  owners           = "973714476881"
+  owners           = ["973714476881"]
 }
 
 # Configure the AWS Provider
